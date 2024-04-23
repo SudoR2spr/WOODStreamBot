@@ -1,0 +1,117 @@
+{
+  "name": "WOODStreamBot",
+  "description": "A Telegram Bot to Convert Telegram Files To Direct & Streamable Links.",
+  "keywords": [
+        "telegram",
+        "files",
+        "stream"
+    ],
+  "repository": "https://github.com/SudoR2spr/WOODStreamBot/",
+  "success_url": "/",
+  "logo": "https://i.ibb.co/zSP9QNQ/Dl.png",
+  "env": {
+    "ENV": {
+      "description": "Set this to True if you don't want to crash the bot",
+      "value": "True"
+    },
+    "API_ID": {
+      "description": "Get this value from https://my.telegram.org"
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org"
+    },
+    "BOT_TOKEN": {
+      "description": "Get this value from @BotFather"
+    },
+    "FLOG_CHANNEL": {
+      "description": "ID of Channel Where store files sent by users. Read the readme for more info about this var"
+    },
+    "ULOG_CHANNEL": {
+      "description": "ID of Channel Where store New Users data. Read the readme for more info about this var"
+    },
+    "OWNER_ID": {
+      "description": "Your Telegram User ID as Owner"
+    },
+    "DATABASE_URL": {
+      "description": "MongoDB URI for saving User Data and Files List created by user."
+    },
+    "AUTH_USERS": {
+      "description": "Put IDs of Auth Usrs where bot will work. You can add multiple IDs & separate with Space.",
+      "required": false
+    },
+    "UPDATES_CHANNEL": {
+      "description": "Channel Username without `@` to set channel as Update Channel",
+      "required": false
+    },
+    "FORCE_SUB_ID": {
+      "description": "Channel ID starts with -100 to set channel as Force Sub Channel",
+      "required": false
+    },
+    "FORCE_SUB": {
+      "description": "Set to True, so every user have to Join update channel to use the bot.",
+      "required": false
+    },
+    "SLEEP_THRESHOLD": {
+      "description": "Set global flood wait threshold, auto-retry requests under 60s. ",
+      "required": false
+    },
+    "WORKERS": {
+      "description": "No. of workers that is to be assigned.",
+      "required": false
+    },
+    "PORT": {
+      "description": "The port that you want your webapp to be listened to",
+      "required": false
+    },
+    "NO_PORT": {
+      "description": "If you don't want your port to be displayed. Set True or False",
+      "value": "True",
+      "required": false
+    },
+    "HAS_SSL": {
+      "description": "(can be either True or False) If you want the generated links in https format.",
+      "value": "True",
+      "required": false
+    },
+    "BIND_ADDRESS": {
+      "description": "Your server bind address. default to 0.0.0.0",
+      "required": false
+    },
+    "FQDN": {
+      "description": "Heroku app Link without http/s://, you can set later. its required",
+      "required": false
+    },
+    "SESSION_NAME": {
+      "description": "Name for the Database created on your MongoDB. Defaults to WOODStream",
+      "required": false
+    },
+    "FILE_PIC": {
+      "description": "To set Image at /files command. Defaults to pre-set image.",
+      "required": false
+    },
+    "START_PIC": {
+      "description": "To set Image at /start command. Defaults to pre-set image.",
+      "required": false
+    },
+    "VERIFY_PIC": {
+      "description": "To set Image at Force Subscribe Verify. Defaults to pre-set image.",
+      "required": false
+    },
+    "MODE": {
+      "description": "Should be set to `secondary` if you only want to use the server for serving files.",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "stack": "heroku-22",
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  }
+}

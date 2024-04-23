@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Stream | {{file_name}}</title>
+    <link rel="shortcut icon" href="https://graph.org/file/61c2ae81117b332875190.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="https://i.ibb.co/SvSwWFc/WDZONE.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link rel="stylesheet" href="https://my-hero-op.github.io/Resources/data/src/style.css">
+    <link rel="stylesheet" href="https://my-hero-op.github.io/Resources/data/src/plyr.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <nav>
+        <div class="nleft">
+            <a href="#">
+                <h3 id="heading" style="z-index: 100;" class="magnet title">𝐖𝐎𝐎𝐃𝐜𝐫𝐚𝐟𝐭 𝐌𝐢𝐫𝐫𝐨𝐫 𝐙𝐨𝐧𝐞™</h3>
+            </a>
+        </div>
+        <div class="home-btn magnet about-btn wlcm abt-chnl contact-btn"></div>
+    </nav>
+
+    <div class="outer">
+        <div class="inner">
+            <div class="main" id="main">
+                <video id="player" class="player" src="{{file_url}}" type="video/mp4" playsinline controls
+                    width="100%"></video>
+                <div class="player"></div>
+                <div class="file-name">
+                    <h4 style="display: inline;">🎬 File Name: </h4>
+                    <p style="display: inline;" id="myDiv">{{file_name}}</p><br>
+                    <h4 style="display: inline;">📦 File Size: </h4>
+                    <p style="display: inline;">{{file_size}}</p>
+                </div>
+                <div class="downloadBtn">
+                    <button class="magnet" onclick="streamDownload()">
+                        <img style="height: 40px;" src="https://i.ibb.co/W3sZ5HG/WD-DL.png" alt=""> Download
+                    </button>
+                    <button class="magnet" onclick="copyStreamLink()">
+                        <img style="height: 40px;" src="https://i.ibb.co/sWtKD2k/Copy.png" alt="Copy Link"> copy link
+                    </button>
+                    <button class="magnet" onclick="vlc_player()">
+                        <img style="height: 40px;" src="https://i.ibb.co/WxnN0fz/wd-vlc.png" alt=""> VLC PLAYER
+                    </button>
+                    <button class="magnet" onclick="mx_player()">
+                        <img style="height: 40px;" src="https://i.ibb.co/74ZB4mm/Mx.png" alt=""> MX PLAYER
+                    </button>
+                    <button class="magnet" onclick="n_player()">
+                        <img style="height: 40px;" src="https://i.ibb.co/pRC8RMg/N-plyer.png" alt=""> nPlayer
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        <footer>
+            <center>
+                <div class="copyright">
+                    <h5 class="text-center">Copyright © 2024 <a href="https://t.me/Opleech_WD" target="_blank"><span
+                                style="font-weight: 700;">WOODcraft</span></a>. All
+                        Rights Reserved.</h5>
+                </div>
+            </center>
+        </footer>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const uncopyableElement = document.querySelector(".uncopyable");
+
+        uncopyableElement.addEventListener("selectstart", function (event) {
+            event.preventDefault();
+        });
+    });
+</script>
+<script src="https://cdn.plyr.io/3.6.9/plyr.js"></script>
+<script src="https://my-hero-op.github.io/Resources/data/src/script.js"></script>
+
+</html>

@@ -1,6 +1,7 @@
-aiohttp
-pyrofork
+pyrogram==2.0.106
+# pyrofork
 python-dotenv
+aiohttp
 tgcrypto
 motor
 aiofiles

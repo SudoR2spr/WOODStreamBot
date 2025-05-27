@@ -87,7 +87,7 @@ async def gen_link(_id):
 
     page_link = f"{Server.URL}watch/{_id}"
     stream_link = f"{Server.URL}dl/{_id}"
-    file_link = f"{Server.URL}file/{_id}"
+    file_link = f"https://t.me/{WOODStream.username}?start=file_{_id}"
 
     if "video" in mime_type:
         stream_text = LANG.STREAM_TEXT.format(file_name, file_size, stream_link, page_link, file_link)
@@ -119,7 +119,7 @@ async def gen_linkx(m:Message , _id, name: list):
 
     page_link = f"{Server.URL}watch/{_id}"
     stream_link = f"{Server.URL}dl/{_id}"
-    file_link = f"{Server.URL}file/{_id}"
+    file_link = f"https://t.me/{WOODStream.username}?start=file_{_id}"
 
     if "video" in mime_type:
         stream_text= LANG.STREAM_TEXT_X.format(file_name, file_size, stream_link, page_link)
